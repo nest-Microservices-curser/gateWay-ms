@@ -1,12 +1,10 @@
-import { BadRequestException, Body, Controller, Delete, Get, Inject, Param, Patch, Post, Query } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Inject, Param, Patch, Post, Query } from "@nestjs/common";
 import { ClientProxy, RpcException } from "@nestjs/microservices";
-import { catchError, firstValueFrom, Observable } from "rxjs";
+import { catchError } from "rxjs";
 import { PaginationDto } from "src/common";
 import { PRODUCT_SERVICE } from "src/config";
 import { CreateProductDto } from "./Dto/producto.dto";
 import { UpdateProductDto } from "./Dto/update-product.dto";
-
-
 
 
 @Controller('products')
